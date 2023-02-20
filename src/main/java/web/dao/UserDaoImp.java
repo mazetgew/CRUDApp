@@ -12,13 +12,6 @@ import java.util.List;
 @Repository
 public class UserDaoImp implements UserDao {
 
-    private List<User> userList = new ArrayList<>();
-    {
-        userList.add(new User("1", "1", "1", 1));
-        userList.add(new User("2", "2", "2", 2));
-        userList.add(new User("3", "3", "3", 3));
-    }
-
     @PersistenceContext
     private EntityManager em;
 
@@ -58,13 +51,12 @@ public class UserDaoImp implements UserDao {
     @Override
     @Transactional
     public List<User> listUsers() {
-        /*try {
+        try {
             System.out.println("Список пользователей получен");
             return em.createQuery("select u from User u", User.class).getResultList();
         } catch (Exception e) {
             System.out.println("Не удалось получить список пользователей");
             return null;
-        }*/
-        return userList;
+        }
     }
 }
