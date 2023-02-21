@@ -16,16 +16,12 @@ public class User {
     private String lastName;
     @Column(name = "specialisation")
     private String specialisation;
-    @Column(name = "salary")
-    private int salary;
-
     public User() {}
 
     public User(String firstName, String lastName, String specialisation, int salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.specialisation = specialisation;
-        this.salary = salary;
     }
 
     public Long getId() { return id; }
@@ -54,13 +50,5 @@ public class User {
 
     public void setSpecialisation(String specialisation) {
         this.specialisation = specialisation;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
     }
 }

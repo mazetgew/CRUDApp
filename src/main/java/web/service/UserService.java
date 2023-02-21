@@ -10,6 +10,8 @@ public interface UserService {
 
     void update(User user);
 
+    User findById(Long id);
+
     void remove(User user);
 
     List<User> listUsers();

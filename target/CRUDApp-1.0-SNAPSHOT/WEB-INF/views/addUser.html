@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>addUser</title>
+</head>
+<body>
+
+<h1>Fill in all the fields</h1>
+
+<br/>
+
+<form th:method="POST" th:action="@{/getAll}" th:object="${user}">
+
+  <label for="firstName">FirstName : </label>
+  <input type="text" th:field="*{firstName}" id="firstName"/>
+
+  <br/>
+
+  <label for="lastName">LastName : </label>
+  <input type="text" th:field="*{lastName}" id="lastName"/>
+
+  <br/>
+
+  <label for="specialisation">Specialisation : </label>
+  <input type="text" th:field="*{specialisation}" id="specialisation"/>
+
+  <br/>
+
+  <input type="submit" value="Add!"/>
+</form>
+</body>
+</html>
