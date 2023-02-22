@@ -7,7 +7,6 @@ import web.model.User;
 import web.service.UserService;
 
 @Controller
-@RequestMapping("")
 public class HelloController {
 
     private final UserService userService;
@@ -34,7 +33,7 @@ public class HelloController {
         return "addUser";
     }
 
-    @PostMapping()
+    @PostMapping
     public String create(@ModelAttribute("user") User user) {
         userService.add(user);
         return "redirect:/getAll";
